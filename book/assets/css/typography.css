@@ -1,0 +1,111 @@
+/*
+
+TYPOGRAPHY
+Adapted from Typeplate 1.1.1 - http://typeplate.com
+Licensed under Creative Commmons Attribution 3.0
+
+*/
+
+/*HEADINGS*/
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'bebas_neueregular';
+	text-transform: uppercase;
+	line-height: 1;
+	margin-top: 0;
+	text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
+}
+
+
+.tera {
+	font-size: 117px;
+	font-size: 6.5rem; /* 117 / 18 = 6.5 */
+	margin-bottom: 0.25385em;
+}
+
+.giga {
+	font-size: 90px;
+	font-size: 5rem; /* 90 / 18 = 5 */
+	margin-bottom: 0.33em;
+}
+
+.mega {
+	font-size: 72px;
+	font-size: 4rem; /* 72 / 18 = 4 */
+	margin-bottom: 0.4125em;
+}
+
+h1, .alpha {
+	font-size: 60px;
+	font-size: 3.33333rem; /* 60 / 18 = 3.3333 */
+	margin-bottom: 0.495em;
+}
+
+h2, .beta {
+	font-size: 48px;
+	font-size: 2.6667rem; /* 48 / 18 = 2.6667 */
+	margin-bottom: 0.61875rem;
+}
+
+h3, .gamma {
+	font-size: 36px;
+	font-size: 2rem; /* 36 / 18 = 2 */
+	margin-bottom: 0.825em;
+}
+
+h4, .delta {
+	font-size: 24px;
+	font-size: 1.3333333333333333rem; /* 24 / 18 = 1.3333 */
+	margin-bottom: 1.2375em;
+}
+
+h5, .epsilon {
+	font-size: 21px;
+	font-size: 1.16667rem; /* 21 / 18 = 1.1667 */
+	margin-bottom: 1.4142857142857141em; /* measure( base font-size(18) * base line-height(1.65) ) / current font-size(21) = margin-bottom(1.4142857142857141) */
+}
+
+h6, .zeta {
+	font-size: 18px;
+	font-size: 1rem; /* 18 = 18 × 1 */
+	margin-bottom: 1.65em; /* measure( base font-size(18) * base line-height(1.65) ) / current font-size(18) = margin-bottom(1.65) */
+}
+
+/*FINE PRINT*/
+
+small {
+	font-size: 65%;
+}
+
+/*PARAGRAPH*/
+
+p {
+	margin: auto auto 1.5em; /* bottom margin for paragraphs */
+}
+
+p.intro{
+/*	border-bottom: 1px dotted #999;*/
+	margin-bottom: 5em;
+}
+
+p + p { text-indent: 1.5em; /* indent subsequent paragraphs */ }
+
+/*DROP CAP*/
+
+.drop-cap:first-letter {
+	float: left;
+	margin: auto .1em auto auto;
+	padding: inherit;
+	font-size: 9em;
+	font-family: 'bebas_neueregular';
+	line-height: 1;
+	text-indent: 0;
+	background: transparent;
+	color: red;
+}
+
+/*AMPERSAND*/
+
+.ampersand {
+	font-family: Ampersand, Verdana, sans-serif;
+}
