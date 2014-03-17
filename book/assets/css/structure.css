@@ -1,20 +1,15 @@
-/* ZINE FRAMEWORK BY RUDY MURILLO JR.
+/* 
+ZINE FRAMEWORK BY RUDY MURILLO JR.
 http://www.rudymurillojr.com
 
 This work is licensed under the Creative Commons Attribution 4.0 International License.
 
 LET'S MAKE SOME ZINES!
-   ================================================== */
+*/
 
-/* RESET
-   ================================================== */
+/* RESET */
 
-html {  font-size: 100% }
-
-some_nowhitespace {  nowhitespace: afterproperty }
-
-/* LET'S MAKE OUR BASE FONT SIZE 16px
-   ================================================== */
+html {  font-size: 100% }/* LET'S MAKE OUR BASE FONT SIZE 16px */
 
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
   margin: 0;
@@ -51,18 +46,14 @@ a img {  border: 0 }
 
 a:hover, a:active {  outline: none }
 
-/* NATURAL BOX LAYOUT
-   ================================================== */
-
+/* NATURAL BOX LAYOUT */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* LET'S GET STARTED
-   ================================================== */
-
+/* LET'S GET STARTED */
 body {
   color: #222;
   font-size: 1rem;
@@ -72,86 +63,55 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ARTICLE ELEMENT IS OUR MAIN CONTAINER
-   ================================================== */
-
+/* ARTICLE ELEMENT IS OUR MAIN CONTAINER */
 article {  overflow: hidden }
 
-/* .PAGE & .PAGEFULL ARE A WAY TO SEMANTICALLY SEPARATE CONTENT. I.E. FOR ARTICLES THAT ARE BROKEN INTO SECTIONS
-   ================================================== */
+/* .PAGE & .PAGEFULL ARE A WAY TO SEPARATE CONTENT. I.E. FOR ARTICLES THAT ARE BROKEN INTO SECTIONS */
 
-/* USE PAGE CLASS IF YOU WANT A MARGIN ON THE SECTION
-   ================================================== */
-
+/* USE PAGE CLASS IF YOU WANT A MARGIN ON THE SECTION */
 .page {
   width: 90%;
   max-width: 66.66667em;
   margin: 0 auto 1.65em auto;
 }
 
-/* PAGEFULL CLASS IS FULL WIDTH
-   ================================================== */
-
+/* PAGEFULL CLASS IS FULL WIDTH */
 .pageFull {
   width: 100%;
   margin: 0 auto 1.65em auto;
 }
 
-/* USE ROW CLASS WITHIN PAGE SECTION TO ... START A NEW ROW OF COLUMNS OR ELEMENTS
-   ================================================== */
-
+/* USE ROW CLASS WITHIN PAGE SECTION TO ... START A NEW ROW OF COLUMNS OR ELEMENTS */
 .row {  margin: 0 auto 1.65em auto }
 
 /* ADD PANEL CLASS TO .PAGE TO MAKE THE SECTION FULL WINDOW HEIGHT VIA JS.
- SEQUENTIAL PANELS HAVE NO MARGIN BETWEEN THEM.
-
-
-    YOUR CONTENT
-
-
-
-    YOUR CONTENT
-
-   ================================================== */
-
+ SEQUENTIAL PANELS HAVE NO MARGIN BETWEEN THEM.*/
 .panel+.panel {  margin-top: -1.65em }
 
 .panel:last-child {  margin-bottom: 0 }
 
-/* ADD MORE SPACE BETWEEN THE ARTICLE HEADER AND THE START OF CONTENT
-   ================================================== */
+article header+.page, #cover+.page {  margin-top: 6.5em } /* ADD MORE SPACE BETWEEN THE ARTICLE HEADER AND THE START OF CONTENT */
 
-article header+.page, #cover+.page {  margin-top: 6.5em }
+/* ZINE IS MOBILE FIRST SO THE GRID STACKS AT ANY WIDTH SMALLER THAN 768PX */
 
-/* ZINE IS MOBILE FIRST SO THE GRID STACKS AT ANY WIDTH SMALLER THAN 768PX
-   ================================================== */
-
-/* COLUMNS
-   ================================================== */
-
+/* COLUMNS */
 .column, .columns {
   display: block;
   margin: 1% 0 1% 0%;
   overflow: hidden;
 }
 
-/* COLUMNS ALL 100% AND STACK
-   ================================================== */
-
+/* COLUMNS ALL 100% AND STACK */
 .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve, .full, .oneHalf, .twoFourths, .half, .oneThird, .twoThirds, .oneFourth, .oneQuarter, .threeFourths {  width: 100% }
 
-/* USE CONTENT CLASSES FOR MAIN TEXT. CONTENT CLASS IS EQUAL TO NINE COLUMNS OR THREE FOURTHS COLUMN. USE THIS IN COMBONATION WITH LEFT AND RIGHT CLASSES CREATE A
-   ================================================== */
-
+/* USE CONTENT CLASSES FOR MAIN TEXT. CONTENT CLASS IS EQUAL TO NINE COLUMNS OR THREE FOURTHS COLUMN. USE THIS IN COMBONATION WITH LEFT AND RIGHT CLASSES CREATE A */
 .content {  width: 100% }
 
 .left {  margin: 1% 0 }
 
 .right {  margin: 1% 0 }
 
-/* CSS3 COLUMNS - ADD THIS TO ANY DIV TO SPLIT TEXT INTO 2 COLUMNS.
-   ================================================== */
-
+/* CSS3 COLUMNS - ADD THIS TO ANY DIV TO SPLIT TEXT INTO 2 COLUMNS. */
 .columnize {
   -moz-column-count: 2;
   -webkit-column-count: 2;
@@ -161,23 +121,17 @@ article header+.page, #cover+.page {  margin-top: 6.5em }
   -webkit-column-gap: 2.222em; /* Safari and Chrome */
 }
 
-/* FOR VIEWPORTS 768PX & UP
-   ================================================== */
-
+/* FOR VIEWPORTS 768PX & UP */
 @media only screen and (min-width: 768px) { 
     html {  font-size: 112.5% }
 
-    /* BUMPING UP OUR BASE FONT SIZE TO 18px
-       ================================================== */
-
+    /* BUMPING UP OUR BASE FONT SIZE TO 18px */
     .column, .columns {
       float: left;
       margin: 0 1%;
     }
 
-    /* 12 COLUMN GRID
-       ================================================== */
-
+    /* 12 COLUMN GRID */
     .one {  width: 6.333% }
 
     .two {  width: 14.666% }
@@ -202,9 +156,7 @@ article header+.page, #cover+.page {  margin-top: 6.5em }
 
     .twelve, .full {  width: 98% }
 
-    /* OFFSETS - IN CASE YOU NEED TO PUSH YOUR COLUMNS OVER
-       ================================================== */
-
+    /* OFFSETS - IN CASE YOU NEED TO PUSH YOUR COLUMNS OVER */
     .offsetOne {  margin-left: 9.333% }
 
     .offsetTwo {  margin-left: 17.666% }
@@ -227,14 +179,10 @@ article header+.page, #cover+.page {  margin-top: 6.5em }
 
     .offsetEleven {  margin-left: 92.663% }
 
-    /* REVERSE
-       ================================================== */
-
+    /* REVERSE */
     .reverse {  float: right }
 
-    /* CONTENT
-       ================================================== */
-
+    /* CONTENT */
     .content {
       float: left;
       display: block;
@@ -243,22 +191,17 @@ article header+.page, #cover+.page {  margin-top: 6.5em }
 
     .left {  margin: 0 26.003% 0 1% }
 
-    .right {  margin: 0 1% 0 26.003% }
+		.right {  margin: 0 1% 0 26.003% }
 }
 
-/* CLEARFIX HACK
-   ================================================== */
-
+/* CLEARFIX HACK */ 
 header:after, section:after, .cf:after, .row:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* YOU CAN ALSO USE 
- TO CLEAR COLUMNS
-   ================================================== */
-
+/* YOU CAN ALSO USE CLEAR CLASS TO CLEAR COLUMNS*/
 .clear {
   clear: both;
   display: block;
