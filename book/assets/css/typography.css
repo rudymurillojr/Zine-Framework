@@ -98,7 +98,7 @@ p + p { text-indent: 1.5em; /* indent subsequent paragraphs */ }
 	padding: inherit;
 	font-size: 9em;
 	font-family: 'bebas_neueregular';
-	line-height: 1;
+	line-height: .85;
 	text-indent: 0;
 	background: transparent;
 	color: red;
