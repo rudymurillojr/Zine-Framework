@@ -1,197 +1,269 @@
-/*
-
-ZINE FRAMEWORK BY RUDY MURILLO JR.
+/* ZINE FRAMEWORK BY RUDY MURILLO JR.
 http://www.rudymurillojr.com
 
 This work is licensed under the Creative Commons Attribution 4.0 International License.
 
 LET'S MAKE SOME ZINES!
+   ================================================== */
 
-*/
+/* RESET
+   ================================================== */
 
-/*RESET*/
+html {  font-size: 100% }
 
-html{font-size: 100%;} /* LET'S MAKE OUR BASE FONT SIZE 16px */
+some_nowhitespace {  nowhitespace: afterproperty }
+
+/* LET'S MAKE OUR BASE FONT SIZE 16px
+   ================================================== */
 
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    font-weight: inherit;
-    font-style: normal;
-    vertical-align: baseline;
-    background: transparent;
-    border: 0;
-    outline: 0;
-	}
-article, aside, figure, figure img, hgroup, footer, header, nav, section { display: block }
-ol, ul { list-style: none }
-blockquote, q { quotes: none }
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+  font-style: normal;
+  vertical-align: baseline;
+  background: transparent;
+  border: 0;
+  outline: 0;
+}
+
+article, aside, figure, figure img, hgroup, footer, header, nav, section {  display: block }
+
+ol, ul {  list-style: none }
+
+blockquote, q {  quotes: none }
+
 blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
-    content: none;
-	}
+  content: '';
+  content: none;
+}
+
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
-	}
-input, select { vertical-align: middle }
-a img { border: 0 }
-:focus { outline: 0 }
-a:hover, a:active { outline: none }
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
-/* NATURAL BOX LAYOUT */
+input, select {  vertical-align: middle }
+
+a img {  border: 0 }
+
+:focus {  outline: 0 }
+
+a:hover, a:active {  outline: none }
+
+/* NATURAL BOX LAYOUT
+   ================================================== */
+
 * {
-       -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-	}
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-/* LET'S GET STARTED */
+/* LET'S GET STARTED
+   ================================================== */
+
 body {
-	color: #222;
-	font-size: 1rem;
-	line-height: 1.65;
-	font-family: 'aleoregular', Georgia, serif;
-	-webkit-text-size-adjust: 100%;
-	-webkit-font-smoothing: antialiased;
+  color: #222;
+  font-size: 1rem;
+  line-height: 1.65;
+  font-family: 'aleoregular', Georgia, serif;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* ARTICLE ELEMENT IS OUR MAIN CONTAINER */
-article { overflow: hidden }
+/* ARTICLE ELEMENT IS OUR MAIN CONTAINER
+   ================================================== */
 
+article {  overflow: hidden }
 
-/* .PAGE & .PAGEFULL ARE A WAY TO SEMANTICALLY SEPARATE CONTENT. I.E. FOR ARTICLES THAT ARE BROKEN INTO SECTIONS */
+/* .PAGE & .PAGEFULL ARE A WAY TO SEMANTICALLY SEPARATE CONTENT. I.E. FOR ARTICLES THAT ARE BROKEN INTO SECTIONS
+   ================================================== */
 
-/* USE PAGE CLASS IF YOU WANT A MARGIN ON THE SECTION */
+/* USE PAGE CLASS IF YOU WANT A MARGIN ON THE SECTION
+   ================================================== */
+
 .page {
-	width: 90%;
-	max-width: 66.66667em;
-	margin: 0 auto 1.65em auto;
+  width: 90%;
+  max-width: 66.66667em;
+  margin: 0 auto 1.65em auto;
 }
 
-/* PAGEFULL CLASS IS FULL WIDTH */
+/* PAGEFULL CLASS IS FULL WIDTH
+   ================================================== */
+
 .pageFull {
-	width:100%;
-	margin: 0 auto 1.65em auto;
+  width: 100%;
+  margin: 0 auto 1.65em auto;
 }
 
-/* USE ROW CLASS WITHIN PAGE SECTION TO ... START A NEW ROW OF COLUMNS OR ELEMENTS */
-.row { margin: 0 auto 1.65em auto }
+/* USE ROW CLASS WITHIN PAGE SECTION TO ... START A NEW ROW OF COLUMNS OR ELEMENTS
+   ================================================== */
+
+.row {  margin: 0 auto 1.65em auto }
 
 /* ADD PANEL CLASS TO .PAGE TO MAKE THE SECTION FULL WINDOW HEIGHT VIA JS.
  SEQUENTIAL PANELS HAVE NO MARGIN BETWEEN THEM.
 
-<section class="page panel">
-	YOUR CONTENT
-</section>
 
-<section class="pageFull panel">
-	YOUR CONTENT
-</section>
+    YOUR CONTENT
 
-*/
-.panel+.panel { margin-top: -1.65em }
 
-.panel:last-child { margin-bottom: 0 }
 
-/* ADD MORE SPACE BETWEEN THE ARTICLE HEADER AND THE START OF CONTENT */
-article header+.page, #cover+.page { margin-top:6.5em }
+    YOUR CONTENT
 
-/* ZINE IS MOBILE FIRST SO THE GRID STACKS AT ANY WIDTH SMALLER THAN 768PX */
+   ================================================== */
 
-/* COLUMNS */
+.panel+.panel {  margin-top: -1.65em }
+
+.panel:last-child {  margin-bottom: 0 }
+
+/* ADD MORE SPACE BETWEEN THE ARTICLE HEADER AND THE START OF CONTENT
+   ================================================== */
+
+article header+.page, #cover+.page {  margin-top: 6.5em }
+
+/* ZINE IS MOBILE FIRST SO THE GRID STACKS AT ANY WIDTH SMALLER THAN 768PX
+   ================================================== */
+
+/* COLUMNS
+   ================================================== */
+
 .column, .columns {
-	  display: block;
-		margin: 1% 0 1% 0%;
-		overflow: hidden;
-		}
+  display: block;
+  margin: 1% 0 1% 0%;
+  overflow: hidden;
+}
 
-/* COLUMNS ALL 100% AND STACK */
-.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve, .full, .oneHalf, .twoFourths, .half, .oneThird, .twoThirds, .oneFourth, .oneQuarter, .threeFourths { width: 100% }
+/* COLUMNS ALL 100% AND STACK
+   ================================================== */
 
-/* USE CONTENT CLASSES FOR MAIN TEXT. CONTENT CLASS IS EQUAL TO NINE COLUMNS OR THREE FOURTHS COLUMN. USE THIS IN COMBONATION WITH LEFT AND RIGHT CLASSES CREATE A */
-.content { width: 100% }
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve, .full, .oneHalf, .twoFourths, .half, .oneThird, .twoThirds, .oneFourth, .oneQuarter, .threeFourths {  width: 100% }
 
-.left { margin: 1% 0;}
+/* USE CONTENT CLASSES FOR MAIN TEXT. CONTENT CLASS IS EQUAL TO NINE COLUMNS OR THREE FOURTHS COLUMN. USE THIS IN COMBONATION WITH LEFT AND RIGHT CLASSES CREATE A
+   ================================================== */
 
-.right { margin: 1% 0;}
+.content {  width: 100% }
 
-/* CSS3 COLUMNS - ADD THIS TO ANY DIV TO SPLIT TEXT INTO 2 COLUMNS.  */
+.left {  margin: 1% 0 }
+
+.right {  margin: 1% 0 }
+
+/* CSS3 COLUMNS - ADD THIS TO ANY DIV TO SPLIT TEXT INTO 2 COLUMNS.
+   ================================================== */
+
 .columnize {
-	-moz-column-count: 2;
-	-webkit-column-count: 2;
-	column-count: 2;
-	column-gap: 2.222em;
-	-moz-column-gap: 2.222em; /* Firefox */
-	-webkit-column-gap: 2.222em; /* Safari and Chrome */
-	}
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  column-count: 2;
+  column-gap: 2.222em;
+  -moz-column-gap: 2.222em; /* Firefox */
+  -webkit-column-gap: 2.222em; /* Safari and Chrome */
+}
 
-/* FOR VIEWPORTS 768PX & UP */
-@media only screen and (min-width: 768px) {
-	
-	html{ font-size: 112.5% } /* BUMPING UP OUR BASE FONT SIZE TO 18px */
+/* FOR VIEWPORTS 768PX & UP
+   ================================================== */
 
-	.column, .columns{
-		float: left;
-		margin: 0 1%;
-		}
+@media only screen and (min-width: 768px) { 
+    html {  font-size: 112.5% }
 
-	/* 12 COLUMN GRID	*/
-	.one { width: 6.333% }
-	.two { width: 14.666% }
-	.three { width: 22.999% }
-	.four { width: 31.332% }
-	.five { width: 39.665% }
-	.six { width: 47.998% }
-	.seven { width: 56.331% }
-	.eight { width: 64.664% }
-	.nine { width: 72.997% }
-	.ten { width: 81.330% }
-	.eleven { width: 89.663% }
-	.twelve, .full { width: 98% }
+    /* BUMPING UP OUR BASE FONT SIZE TO 18px
+       ================================================== */
 
-	/* OFFSETS - IN CASE YOU NEED TO PUSH YOUR COLUMNS OVER */
-	.offsetOne { margin-left: 9.333% }
-	.offsetTwo { margin-left: 17.666% }
-	.offsetThree { margin-left: 25.999% }
-	.offsetFour { margin-left: 34.332% }
-	.offsetFive { margin-left: 42.665% }
-	.offsetSix { margin-left: 50.998% }
-	.offsetSeven { margin-left: 59.331% }
-	.offsetEight { margin-left: 67.664% }
-	.offsetNine { margin-left: 75.997% }
-	.offsetTen { margin-left: 84.330% }
-	.offsetEleven { margin-left: 92.663% }
+    .column, .columns {
+      float: left;
+      margin: 0 1%;
+    }
 
-	/* REVERSE */
-	.reverse { float: right }
+    /* 12 COLUMN GRID
+       ================================================== */
 
-	/* CONTENT */
-	.content {
-		float: left; 
-		display: block;
-		width: 72.997%;
-		}
+    .one {  width: 6.333% }
 
-	.left { margin: 0 26.003% 0 1% }
+    .two {  width: 14.666% }
 
-	.right { margin: 0 1% 0 26.003% }
-	
-	}
+    .three {  width: 22.999% }
 
-/* CLEARFIX HACK */
-header:after, section:after, .cf:after, .row:after{
-	content: "";
-	display: table;
-	clear: both;
-	}
+    .four {  width: 31.332% }
 
-/* YOU CAN ALSO USE <br class="clear"/> TO CLEAR COLUMNS */
+    .five {  width: 39.665% }
+
+    .six {  width: 47.998% }
+
+    .seven {  width: 56.331% }
+
+    .eight {  width: 64.664% }
+
+    .nine {  width: 72.997% }
+
+    .ten {  width: 81.330% }
+
+    .eleven {  width: 89.663% }
+
+    .twelve, .full {  width: 98% }
+
+    /* OFFSETS - IN CASE YOU NEED TO PUSH YOUR COLUMNS OVER
+       ================================================== */
+
+    .offsetOne {  margin-left: 9.333% }
+
+    .offsetTwo {  margin-left: 17.666% }
+
+    .offsetThree {  margin-left: 25.999% }
+
+    .offsetFour {  margin-left: 34.332% }
+
+    .offsetFive {  margin-left: 42.665% }
+
+    .offsetSix {  margin-left: 50.998% }
+
+    .offsetSeven {  margin-left: 59.331% }
+
+    .offsetEight {  margin-left: 67.664% }
+
+    .offsetNine {  margin-left: 75.997% }
+
+    .offsetTen {  margin-left: 84.330% }
+
+    .offsetEleven {  margin-left: 92.663% }
+
+    /* REVERSE
+       ================================================== */
+
+    .reverse {  float: right }
+
+    /* CONTENT
+       ================================================== */
+
+    .content {
+      float: left;
+      display: block;
+      width: 72.997%;
+    }
+
+    .left {  margin: 0 26.003% 0 1% }
+
+    .right {  margin: 0 1% 0 26.003% }
+}
+
+/* CLEARFIX HACK
+   ================================================== */
+
+header:after, section:after, .cf:after, .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* YOU CAN ALSO USE 
+ TO CLEAR COLUMNS
+   ================================================== */
+
 .clear {
-	clear: both;
-	display: block;
-	overflow: hidden;
-	visibility: hidden;
-	width: 0;
-	height: 0;
-	}
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}

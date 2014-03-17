@@ -10,9 +10,9 @@ This work is licensed under the Creative Commons Attribution 4.0 International L
 /*SOME STYLE AND HELPER ELEMENTS*/
 
 article header, .articleHeader {
-    position: relative;
-    width: 100%;
-}
+	position: relative;
+	width: 100%;
+	}
 
 article header img, .articleHeader img {
 	width: 100%;
@@ -21,11 +21,11 @@ article header img, .articleHeader img {
 	-moz-user-select: none;
 	-o-user-select: none;
 	user-select: none;
-}
+	}
 
 #headline{}
 
-#byline{border-top 1px solid #fff}
+#byline{ border-top 1px solid #fff }
 
 /*
 THANKS TO ANDY TAYLOR FOR THE PULLQUOTES
@@ -35,7 +35,7 @@ http://andytaylor.me
 p[data-pullquote] {
 	display: block;
 	text-indent: 0;
-}
+	}
 
 p[data-pullquote]:before {
 	content: attr(data-pullquote);
@@ -46,7 +46,7 @@ p[data-pullquote]:before {
 	text-transform: uppercase;
 	text-align: center;
 	color: #999;
-}
+	}
 
 blockquote{
 	font-family: 'arvil_sansregular';
@@ -59,14 +59,8 @@ blockquote p{
 	line-height:1;
 	margin-bottom: 1.65em;
 	text-align: left;
-	/* Fallback for web browsers that don't support RGBa */
-	background-color: rgb(227, 45, 64);
-	/* RGBa with 0.6 opacity */
-	background-color: rgba(227, 45, 64, 0.8);
-	/* For IE 5.5 - 7*/
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
-	/* For IE 8*/
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+	background-color: rgb(227, 45, 64); /* FALLBACK RGBa - USE WHATEVER COLOR YOUR HEART DESIRES */
+	background-color: rgba(227, 45, 64, 0.8); /* RGBa WITH 80% OPACITY */
 	}
 
 .panel { position: relative }
@@ -81,11 +75,9 @@ blockquote p{
 	-webkit-transform: translate(-50%, -50%);
 					transform: translate(-50%, -50%);
 	width: 75%;
-}
+	}
 
-.panel blockquote p {
-	margin-bottom: 0;
-}
+.panel blockquote p { margin-bottom: 0 }
 
 /*FIGURES*/
 
@@ -93,7 +85,7 @@ figure, figure.photo{
 	width: 100%;
 	margin: auto auto 1.5em;
 	position: relative;
-}
+	}
 
 figure img {
 	max-width: 100%;
@@ -110,7 +102,7 @@ figcaption{
 	text-align: left;
 	font-family: 'arvil_sansregular';
 	padding: .75rem .75rem 0 .75rem;
-}
+	}
 
 
 /*HELPER CLASSES*/
